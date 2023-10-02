@@ -1,0 +1,895 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #ccc;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #9e9292;
+}
+
+@font-face
+{
+    font-family: spaceranger;
+    src: url(../fonts/spaceranger.ttf);
+}
+
+@font-face {
+    font-family: marvel;
+    src: url(../fonts/Aloevera-OVoWO.ttf);
+}
+
+body
+{
+    background-image: url(../media/banner-img.jpg);
+    background-color: rgba(0, 0, 0, 0.715);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header
+{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+nav .logo .text
+{
+    display: none;
+}
+nav img
+{
+    width: 100px;  
+    border-radius: 50%;
+    padding: 10px;
+}
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li::after
+{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f48236;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+
+.nav-links ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: marvel;
+}
+
+nav .fa
+{
+    display: none;
+}
+
+/*--------NAV Style completed-------------*/
+
+
+
+.wrapper
+{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.wrapper h1
+{
+    font-family: marvel;
+    color: #fff;
+    font-size: 56px;
+    text-transform: uppercase;
+}
+.wrapper h3
+{
+    font-family: marvel;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    color: #f48236;
+    margin-bottom: 10px;
+}
+.wrapper h4
+{
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+/*----------Wrapper completed--------------*/
+
+.sympo
+{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content:center;
+}
+.sympo .about-sympo
+{
+    margin: auto;
+    margin: 0px 0px 20px 0px;
+}
+.sympo .about-sympo h1
+{
+    color: white;
+    text-transform: uppercase;
+    margin: 0px 0px 20px 0px;
+    text-decoration: underline;
+}
+.sympo .about-sympo p
+{
+    text-align: justify;
+    color: #fff;
+    text-indent: 50px;
+    line-height: 1.7;
+}
+.sympo .people
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sympo .people .persons
+{
+    margin:10px;
+    border: 3px solid #f48236;
+    padding: 10px;
+    width: 30%;
+}
+.sympo .people .persons .heads
+{
+    color: rgb(92, 255, 255);
+}
+.sympo .people .persons .names
+{
+    color: #fff;
+    text-transform: capitalize;
+}
+.sympo .people .persons .names span
+{
+    font-size: 12px;
+}
+.sympo .people .persons p
+{
+    color: #fff;
+}
+
+/*-----------sympo completed--------------*/
+
+.link
+{
+    background-color: #f48236;
+    position: fixed;
+    bottom: 0;
+    z-index: 8;
+    margin: 30px 20px;
+    border-radius: 10px;
+}
+
+.link a
+{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+/*------------link-------------*/
+
+.reg
+{
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #000;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.reg h3
+{
+    color: white;
+    margin-bottom: 15px;
+}
+.reg h3 a
+{
+    color: #f48236;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    border: 4px solid transparent;
+    padding: 5px 7px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    border-radius: 10px;
+    transition: 1s;
+    animation: anime 5s infinite ease-in-out;
+}
+.reg h3 a:hover
+{
+    color: #fff;
+}
+
+@keyframes anime
+{
+    0%,100%
+    {
+        border-image: linear-gradient(90deg,rgb(0, 255, 0),red) 100;
+        border-image-slice: 1;
+    }
+    25%
+    {
+        border-image: linear-gradient(90deg,red,blue) 100;
+        border-image-slice: 1;
+    }
+    50%
+    {
+        border-image: linear-gradient(90deg,blue,yellow) 100;
+        border-image-slice: 1;
+    }
+    75%
+    {
+        border-image: linear-gradient(90deg,yellow,rgb(0, 255, 0)) 100;
+        border-image-slice: 1;
+    }
+}
+
+/*----------------REG link--------------------*/
+
+.event-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: marvel;
+}
+
+.event-container .events .event .desc
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 40%;
+    font-family: spaceranger;
+}
+.event-container .events .event .desc h2
+{
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+.event-container .events .event .desc p
+{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.2;
+    text-indent: 50px;
+}
+
+.event-container .events .event img
+{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+.event-container .events .event 
+{
+    width: 100%;
+    height:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.event-container .events .event table
+{
+    border: 2px solid #f48236;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+    margin: 25px 0px;
+}
+.event-container .events .event td
+{
+    border: 2px solid #f48236;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+.event-container .events .event:nth-child(even) img
+{
+    order: 2;
+}
+
+.event-container .events
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc ul li
+{
+    list-style:none;
+    text-align: left;
+    padding: 3px;
+}
+.desc ul li::before
+{
+    content: '✔';
+    padding: 2px;
+}
+
+/*------------------------------------------------------------*/
+
+.coordinates
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.coordinates .person
+{
+    margin: 20px;
+    border: 3px solid #f48236;
+    padding: 10px;
+    text-align: center;
+    min-width: 300px;
+}
+.coordinates .person h1
+{
+    color: #fff;
+}
+.coordinates .person p
+{
+    color: white;
+    line-height: 1.2;
+}
+.coor .heads
+{
+    text-align: center;
+}
+.coor .heads h1
+{
+    margin-top: 0px;
+    padding-top: 35px;
+    color: #fff;
+}
+.coor .heads p
+{
+    margin-bottom: 0px;
+    padding-bottom: 35px;
+    color: rgb(185, 80, 255);
+    color: #f48236;
+}
+
+.contacts a,
+.contacts span
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: larger;
+    padding: 20px;
+    text-decoration: none;
+}
+.contacts a:hover
+{
+    text-decoration: underline;
+}
+
+.contact-div .contacts
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer
+{
+    background-image: url(../media/Footericon.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.863);
+    background-blend-mode: saturation;
+    background-position: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.450);
+}
+footer p
+{
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+.footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+    line-height: 2;
+}
+.footer h3
+{
+    text-decoration: underline;
+}
+
+.footer .contacts a,
+.footer .contacts span
+{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 7px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.footer .contacts a i,
+.contacts span i
+{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.footer .contacts a:hover
+{
+    text-decoration: underline;
+}
+
+/*----------------------------------*/
+
+.event-container .events .heading
+{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background-image: url(../media/banner-img.jpg);
+    background-color: rgba(0, 0, 0, 0.715);
+    background-blend-mode:color-dodge;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fffef9;
+}
+.heading h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vw;
+    margin: 0;    
+    letter-spacing: 10px;
+    font-family: marvel;
+    
+}
+
+/*------------------------------------*/
+
+
+.sponsors
+{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+}
+
+.sponsors h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4vw;
+    color: #f48236;
+    letter-spacing: 5px;
+    font-family: spaceranger;
+    margin-top: 100px;
+}
+
+.sponsors .company
+{
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.sponsors .company .spon-logo
+{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.15),
+                -2px -2px 10px rgba(0,0,0,.15);
+}
+
+.sponsors .company .spon-logo img
+{
+    width: 100%;
+    padding: 10px;
+}
+
+.spon-logo .about-comp
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 250px;
+    text-align: center;
+    transition: 1s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.spon-logo:hover .about-comp
+{
+    top: 0px;
+    background-color: #e01a1af3;
+    color: #fff;
+}
+
+.about-comp a
+{
+    font-weight: bolder;
+    color: #ec5dff;
+}
+
+.about-comp a:hover
+{
+    text-decoration: none;
+}
+
+.about-comp p
+{
+    line-height: 1.5;
+    color: #fff;
+}
+
+/*================Map=================*/
+
+
+.schedule
+{
+    width: 100%;
+    background-color: #000;
+    padding: 40px 0px;
+    overflow: hidden;
+}
+.schedule table
+{
+    width: 70%;
+    margin: auto;
+    color: white;
+    border: 2px solid #f48236;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.schedule table th
+{
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.116);
+    font-family: spaceranger;
+    font-weight: 100;
+    padding: 10px;
+}
+
+.schedule table tr:nth-child(2)
+{
+    background-color: rgb(207, 75, 75);
+    font-size: larger;
+    font-weight: 900;
+}
+
+.schedule table td
+{
+    border: 2px solid #f48236;
+    background-color: rgba(255, 255, 255, 0.116);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+}
+
+.schedule table tr:hover:not(:nth-child(2))
+{
+    background-color: rgba(255, 255, 255, 0.116);
+}
+
+
+@media screen and (max-width:1000px)
+{
+
+    .heading h1
+    {
+        font-size: 10vw;
+    }
+
+    nav img
+    {
+        display: none;
+    }
+    nav .logo .text
+    {
+        display: block;
+        text-decoration: none;
+        font-family: marvel;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-left: 15px;
+    }
+    .nav-links ul li
+    {
+        display: block;
+    }
+    .nav-links
+    {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        background-color: #f48236;
+        text-align: left;
+        z-index: 20;
+        transition: 1s;
+    }
+    nav .fa
+    {
+        display: block;
+        color: #f48236;
+        margin: 20px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav .fa-times
+    {
+        color: white;
+    }
+
+    nav .nav-links ul
+    {
+        padding: 30px;
+    }
+
+    nav .logo h1 .text span
+    {
+        color: #f48236;
+    }
+
+    /*-------Navbar styles completed-------*/
+
+    .wrapper h1
+    {
+        font-size: 30px;
+    }
+    .wrapper h3
+    {
+        letter-spacing: 1px;
+        font-size: 13px;
+    }
+    .wrapper h4
+    {
+        font-size: 13px;
+    }
+
+    /*--------Wrapper completed-----------*/
+
+    
+    .sympo .people .persons
+    {
+        width: 100%;
+    }
+    .sympo
+    {
+        width: 90%;
+    }
+    .sympo .about-sympo p
+    {
+        line-height: 1.4;
+    }
+
+
+    /*=====================*/
+
+    .reg h3 a
+    {
+        font-size: 15px;
+    }
+    .reg h3
+    {
+        font-size: 10px;
+    }
+
+
+    /*----------------------------------------------*/
+
+
+
+    .event-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.774);       
+        background-blend-mode: color-dodge;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: marvel;
+    }
+
+    .event-container .events .event .desc
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+    }
+    .event-container .events .event .desc h2
+    {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .event-container .events .event .desc p
+    {
+        text-align: justify;
+        line-height: 1;
+        text-indent: 50px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .event-container .events .event img
+    {
+        width: 220px;
+        height: 220px;
+        
+    }
+    .event-container .events .event 
+    {
+        flex-direction: column;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .event-container .events .event:nth-child(even) img
+    {
+        order: 0;
+    }
+
+    .event-container .events
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    .desc ul li
+    {
+        list-style:none;
+        text-align: left;
+        padding: 3px;
+    }
+    .desc ul li::before
+    {
+        content: '✔';
+        padding: 2px;
+    }
+
+    /*------------------------------*/
+
+    .sponsors h1
+    {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .sponsors .company
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sponsors .company .spon-logo
+    {
+        margin: 2px;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+
+    /*==================================*/
+
+    .schedule table
+    {
+        width: 90%;
+        margin: auto;
+    }
+    .schedule table td
+    {
+        padding: 2px;
+        font-size: 13px;
+    }
+
+}
